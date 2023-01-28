@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Cairo", sans-serif;
+}
+.container {
+  width: 1169px;
+  background-color: #f6f6f6;
+  margin: 0 auto;
+  position: relative;
+  padding: 60px 50px 50px;
+  display: flex;
+  gap: 20px;
+}
+.container .save {
+  position: absolute;
+  display: block;
+  color: white;
+  background-color: #2196f3;
+  padding: 5px 30px 5px 10px;
+  font-weight: bold;
+  top: 10px;
+  right: 50px;
+}
+.container .save::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 0;
+  width: 0;
+  border: 20px solid;
+  border-color: transparent #f6f6f6 transparent transparent;
+}
+.container > div {
+  flex: 1;
+}
+ul {
+  list-style: none;
+}
+ul li {
+  padding: 10px 10px 10px 40px;
+  background-color: white;
+  border-bottom: 1px solid #f6f6f6;
+  position: relative;
+}
+.correct {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #009688;
+  left: 10px;
+  top: 50%;
+  transform: translatey(-50%);
+}
+.correct::before {
+  content: "";
+  width: 10px;
+  height: 3px;
+  position: absolute;
+  background-color: white;
+  top: 45%;
+  left: 35%;
+  transform: rotate(-45deg);
+}
+.correct::after {
+  content: "";
+  width: 8px;
+  height: 3px;
+  position: absolute;
+  background-color: white;
+  top: 50%;
+  left: 15%;
+  transform: rotate(45deg);
+}
+.wrong {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #e91e63;
+  left: 10px;
+  top: 50%;
+  transform: translatey(-50%);
+}
+.wrong::before {
+  content: "";
+  width: 9px;
+  height: 2px;
+  position: absolute;
+  background-color: white;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.wrong::after {
+  content: "";
+  width: 9px;
+  height: 2px;
+  position: absolute;
+  background-color: white;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.basic h3 {
+  background-color: #f44336;
+  color: white;
+  padding: 10px;
+  border-radius: 6px 6px 0 0;
+}
+.professional h3 {
+  background-color: #2196f3;
+  color: white;
+  padding: 10px;
+  border-radius: 6px 6px 0 0;
+}
+.inf {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #7e7e7e;
+  color: white;
+  top: 50%;
+  right: 10px;
+  transform: translatey(-50%);
+}
